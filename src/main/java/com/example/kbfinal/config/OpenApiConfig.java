@@ -14,19 +14,19 @@ public class OpenApiConfig {
     @Bean
     public OpenAPI springShopOpenAPI() {
         return new OpenAPI()
-                .info(new Info().title("Spring Shop API")
-                        .description("Spring Shop sample application")
+                .info(new Info().title("User api")
+                        .description("user sample application")
                         .version("v0.0.1")
                         .license(new License().name("Apache 2.0").url("http://springdoc.org")))
                 .externalDocs(new ExternalDocumentation()
-                        .description("Spring Shop Wiki Documentation")
+                        .description("User Wiki Documentation")
                         .url("https://springshop.wiki.github.org/docs"));
     }
 
     @Bean
     public GroupedOpenApi publicApi() {
         return GroupedOpenApi.builder()
-                .group("springshop-public")
+                .group("user-public")
                 .pathsToMatch("/**")
                 .build();
     }
